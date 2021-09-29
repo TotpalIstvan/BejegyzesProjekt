@@ -8,8 +8,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
-    private List<Bejegyzes> bejegyzesek = new ArrayList<>(2);
-    public void main(String[] args) {
+
+    public static void main(String[] args) {
 
 
         Scanner sc = new Scanner(System.in);
@@ -23,19 +23,5 @@ public class Main {
             db = bejegyzesekSzama;
         }
 
-try {
-
-    FileReader fr = new FileReader("bejegyzesek.txt");
-    BufferedReader br = new BufferedReader(fr);
-    String sor = br.readLine();
-    while (sor != null) {
-        String[] adatok = sor.split(";");
-        Bejegyzes bejegyzes = new Bejegyzes(adatok[0],adatok[1]);
-        this.bejegyzesek.add(bejegyzes);
-        sor = br.readLine();
-    }
-}catch (IOException e) {
-    System.out.println(e.getMessage());
-}
     }
 }

@@ -1,8 +1,14 @@
 package hu.petrik.bejegyzesprojekt;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Bejegyzes {
+    private List<Bejegyzes> bejegyzesek = new ArrayList<>(2);
     private String szerzo;
     private String tartalom;
     private  int likeok;
@@ -43,6 +49,24 @@ public class Bejegyzes {
         return String.format("s-s-s" + this.szerzo, this.likeok,this.letrejott
         + "/" + this.szerkesztve +"/" + this.tartalom);
 
+    }
 
+    public void Bekeres() {
+        try {
+
+            FileReader fr = new FileReader("bejegyzesek.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String sor = br.readLine();
+            while (sor != null) {
+                String[] adatok = sor.split(";");
+                Bejegyzes bejegyzes = new Bejegyzes(adatok[0],adatok[1]);
+                this.bejegyzesek.add(bejegyzes);
+                sor = br.readLine();
+            }
+        }catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
+
+
