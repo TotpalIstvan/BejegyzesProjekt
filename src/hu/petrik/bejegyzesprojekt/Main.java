@@ -14,7 +14,13 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Kérek egy darabszámot");
+        System.out.println("Kérek egy darabszámot!");
         int db = sc.nextInt();
+        System.out.println("Kérem a bejegyzések számát!");
+        int bejegyzesekSzama = sc.nextInt();
+
+        if (db != bejegyzesekSzama) {
+            System.out.println("A két számnak ugyanannyinak kell lennie");
+        }
     }
 }
