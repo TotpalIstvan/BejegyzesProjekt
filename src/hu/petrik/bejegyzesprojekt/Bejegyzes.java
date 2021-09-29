@@ -34,7 +34,7 @@ public class Bejegyzes {
         return szerkesztve;
     }
 
-    public  void like() {
+    public void like() {
         likeok++;
     }
 
