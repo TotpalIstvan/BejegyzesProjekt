@@ -20,7 +20,7 @@ public class Main {
         int bejegyzesekSzama = sc.nextInt();
 
         if (db != bejegyzesekSzama) {
-            System.out.println("A két számnak ugyanannyinak kell lennie");
+            db = bejegyzesekSzama;
         }
     }
 }
