@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
-    private List<Bejegyzes> bejegyzesek;
+    private List<Bejegyzes> bejegyzesek = new ArrayList<>(2);
     public void main(String[] args) {
 
 

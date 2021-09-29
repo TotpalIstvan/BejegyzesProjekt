@@ -42,5 +42,7 @@ public class Bejegyzes {
     public String toString() {
         return String.format("s-s-s" + this.szerzo, this.likeok,this.letrejott
         + "/" + this.szerkesztve +"/" + this.tartalom);
+
+
     }
 }
