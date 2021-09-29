@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         List<Bejegyzes> bejegyzes = new ArrayList<>(2);
 
-        Scanner sc = new Scanner();
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Kérek egy darabszámot");
         int db = sc.nextInt();
